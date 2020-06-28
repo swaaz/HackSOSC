@@ -108,8 +108,6 @@ def chat(user_input):
     # inp = input("You: ")
     inp = user_input
 
-    # if inp.lower() == "quit":
-        # break
     if inp.lower() == "quit":
         exit()
         
