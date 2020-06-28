@@ -107,14 +107,12 @@ def chat(user_input):
     # while True:
     # inp = input("You: ")
     inp = user_input
-<<<<<<< HEAD
+
     # if inp.lower() == "quit":
         # break
-=======
     if inp.lower() == "quit":
         exit()
         
->>>>>>> a5f5a3bb4c4b323e6a43cab29d16ad9580aa87e8
     results = model.predict([bag_of_words(inp, words)])
     results_index = numpy.argmax(results)
     tag = labels[results_index]
@@ -133,4 +131,4 @@ def chat(user_input):
 
 # print(chat("What is sosc?"))
 
-chat(user_input)
+# chat(user_input)
