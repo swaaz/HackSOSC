@@ -1,41 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOSC Chat Bot</title>
     <!-- CSS file link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
     <!-- JS file link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- for flask -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
-    <h1>Test-Flask!!!</h1>
 
-    
+<body>
+    <!-- <h1>Test-Flask!!!</h1> -->
+
+
     <!-- Floating icon -->
     <button class="chat-button" id='chat-button-open'><img id="message-icon" src='../static/assets/message-icon.png'></button>
-    <!-- Chat Window -->
     <button class="chat-button" id='chat-button-close'><img id="cross-icon" src="../static/assets/cross-icon.png" alt="close"></button>
     <div class="bot" id="bot">
         <!-- Header -->
         <div class="chat" id="chat">
+
             <div class="bot-header" id="bot-header">
                 <img id='bot-header-image' src="../static/assets/hero_github.png" alt="ChatBot">
                 <p id="bot-header-text">Say Hi and ask all your queries</p>
             </div>
+
+            <div id="userInput">
+                <input id='chat-textfield' type="text" name="msg" placeholder="Type your Message Here">
+                <button id="send-button" type="submit" value="Send"><img src="../static/assets/send-icon.png" id="send-icon" alt="Send"></button>
+            </div>
+
         </div>
-        <!-- Input from user -->
-        <input id='chat-textfield' type="text" placeholder="Type Here">
-        <button id="send-button"><img src="../static/assets/send-icon.png" id="send-icon" alt="Send"></button>
     </div>
 
-<!-- JS flie path -->
-<script src="../static/js/main.js"></script> 
+    <script src="../static/js/main.js"></script>
+
+
+
+
+
+    <script>
+        function getResponse() {
+            let userText = $("#chat-textfield").val();
+            let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+            $("#chat-textfield").val("");
+            $("#bot-header").append(userHtml);
+            document.getElementById('userInput').scrollIntoView({
+                block: 'start',
+                behavior: 'smooth'
+            });
+            $.get("/get", {
+                msg: userText
+            }).done(function(data) {
+                var botHtml = '<p class="bot-header-text"><span>' + data + '</span></p>';
+                $("#bot-header").append(botHtml);
+                document.getElementById('userInput').scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth'
+                });
+            });
+        }
+        $("#chat-textfield").keypress(function(e) {
+            //if enter key is pressed
+            if (e.which == 13) {
+                getResponse();
+            }
+        });
+        $("#send-button").click(function() {
+            getResponse();
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </div>
 
 
 </body>
+
 </html>
