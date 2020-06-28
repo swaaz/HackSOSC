@@ -96,21 +96,21 @@ def bag_of_words(s, words):
     return numpy.array(bag)
 
 
-def chat():
-    while True:
-        inp = input("You: ")
-        if inp.lower() == "quit":
-            break
+def chat(user_input):
+    # while True:
+    # inp = input("You: ")
+    inp = user_input
+    # if inp.lower() == "quit":
+         # break
+    results = model.predict([bag_of_words(inp, words)])
+    results_index = numpy.argmax(results)
+    tag = labels[results_index]
 
-        results = model.predict([bag_of_words(inp, words)])
-        results_index = numpy.argmax(results)
-        tag = labels[results_index]
+    for tg in data["intents"]:
+        if tg['tag'] == tag:
+            responses = tg['responses']
 
-        for tg in data["intents"]:
-            if tg['tag'] == tag:
-                responses = tg['responses']
-
-        print(random.choice(responses))
+    return(random.choice(responses))
         
 print("Hi I am chatbot, start here: ")
 
