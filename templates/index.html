@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,32 +11,127 @@
     <!-- JS file link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- for flask -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
-    <h1>Test-Flask!!!</h1>
 
-    
-    <!-- Floating icon -->
-    <button class="chat-button" id='chat-button-open'><img id="message-icon" src='../static/assets/message-icon.png'></button>
-    <!-- Chat Window -->
+<body>
+    <!-- <h1>Test-Flask!!!</h1> -->
+    <!-- 
+
+    Floating icon
+    <button class="chat-button" id='chat-button-open'><img id="message-icon" src='../static/assets/message-icon.png'></button> Chat Window
     <button class="chat-button" id='chat-button-close'><img id="cross-icon" src="../static/assets/cross-icon.png" alt="close"></button>
     <div class="bot" id="bot">
-        <!-- Header -->
+        Header
         <div class="chat" id="chat">
             <div class="bot-header" id="bot-header">
                 <img id='bot-header-image' src="../static/assets/hero_github.png" alt="ChatBot">
                 <p id="bot-header-text">Say Hi and ask all your queries</p>
             </div>
         </div>
-        <!-- Input from user -->
+        Input from user
         <input id='chat-textfield' type="text" placeholder="Type Here">
         <button id="send-button"><img src="../static/assets/send-icon.png" id="send-icon" alt="Send"></button>
     </div>
 
-<!-- JS flie path -->
-<script src="../static/js/main.js"></script> 
+    JS flie path
+    <script src="../static/js/main.js"></script> -->
+
+
+
+    <h1>Flask ChatBot</h1>
+
+
+    <div>
+
+        <div id="chatbox">
+
+            <p class="botText">
+
+                <span>Hi!</span>
+
+            </p>
+
+        </div>
+
+
+        <div id="userInput">
+
+            <input id="textInput" type="test" name="msg" placeholder="Message">
+
+            <input id="buttonInput" type="submit" value="Send">
+
+        </div>
+
+
+
+        <script>
+            function getBotResponse()
+
+            {
+
+                var rawText = $("#textInput").val();
+
+                var userHtml = '<p class="userTest"><span>' + rawText + '</span></p>';
+                $("#textInput").val("");
+
+                $("#chatbox").append(userHtml);
+                document.getElementById('userInput').scrollIntoView({
+                    block: 'start',
+                    behaviour: 'smooth'
+                });
+
+
+                $.get("/get", {
+                        msg: rawText
+                    }).done(function(data)
+
+                        {
+
+                            var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+
+                            $("#chatbox").append(botHtml);
+
+                            document.getElementById('userInput').scrollIntoView({
+                                block: 'start',
+                                behaviour: 'smooth'
+                            });
+                        }
+
+
+                        $("textInput").keypress(function(e)
+
+                            {
+
+                                if (e.which == 13)
+
+                                {
+
+                                    getBotResponse();
+
+                                }
+
+                            }
+
+                        );
+
+
+                        $("#buttonInput").click(function()
+
+                            {
+
+                                getBotResponse();
+
+                            }
+
+                        )
+        </script>
+
+    </div>
+
+
 
 
 </body>
+
 </html>
