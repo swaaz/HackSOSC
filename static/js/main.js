@@ -37,7 +37,7 @@ function updateScroll(){
 
 //output text
 //function outputText(text){
-//    $('body').append("<div class='chat-container output'><p class='output'>"+text+"</p></div><br>");
+//    $('body').append("<div class='chat-output'><p class='output'>"+text+"</p></div><br>");
 //};
 })
 
