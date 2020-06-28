@@ -1,33 +1,36 @@
 {"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
-     "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
-     "context_set": ""
-    },
-    {"tag": "goodbye",
-     "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-     "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
-     "context_set": ""
-    },
-    {"tag": "age",
-     "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
-     "responses": ["I am 18 years old!", "18 years young!"],
-     "context_set": ""
-    },
-    {"tag": "name",
-     "patterns": ["what is your name", "what should I call you", "whats your name?"],
-     "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
-     "context_set": ""
-    },
-    {"tag": "shop",
-     "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-     "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-     "context_set": ""
-    },
-    {"tag": "hours",
-     "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-     "responses": ["We are open 7am-4pm Monday-Friday!"],
-     "context_set": ""
-    }
-]
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["bye", "cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "about",
+         "patterns": ["what is sosc", "tell me about sosc", "what is open source community", "who are sosc"],
+         "responses": ["SOSC is an Open source Community of Sahyadri College Of Engineering, it's a conglomeration of different coding clubs in our college, take a look at our About section of our website :)"],
+         "context_set": ""
+        },
+        {"tag": "clubs",
+         "patterns": ["what club", "which clubs are in sosc", "join club"],
+         "responses": ["There are many clubs in SOSC like Developer Student Club, Mozilla Club, Open-Source Women's Commnunity etc you can join any club of your choice :)", 
+                "You can join a plethora of clubs in our community!, take a look at our clubs page"],
+         "context_set": ""
+        },
+        {"tag": "recruit",
+         "patterns": ["can I join sosc", "how do I join sosc", "do I need coding skills to join sosc", "who can I talk to about joining sosc"],
+         "responses": ["Anybody with the a will to learn and contribute to commnuity can join SOSC", 
+                "You can choose the club of your choice and approach our core-team members", 
+                "You can talk to our community leads and directly talk to us. Check out our members page to talk to our Core Team :)"],
+         "context_set": ""
+        },
+        {"tag": "hours",
+         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
+         "responses": ["We are open 7am-4pm Monday-Friday!"],
+         "context_set": ""
+        }
+   ]
 }

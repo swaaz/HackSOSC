@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOSC</title>
     <!-- CSS file link -->
-    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
     <!-- JS file link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
     <h1>Test-Flask!!!</h1>
+<<<<<<< HEAD
     <button id='chat-button'>
         <i class="icofont-ui-messaging"></i>
     </button>
+=======
+    <button id='chat-button'><img id="message-icon" src='../assets/message-icon.png'></button>
+>>>>>>> 93671f1ae28a3685c76687fb697fe1a8f4e52d9b
     <div class="bot" id="bot">
-        <div class="bot-header" id="bot-header"></div>
+        <div class="bot-header" id="bot-header">
+            <img id='bot-header-image' src="../assets/hero_github.png" alt="ChatBot">
+            <p id="bot-header-text">Say Hi and ask all your queries</p>
+        </div>
         <div class="chat" id="chat"></div>
-        <input type="text" placeholder="Type Here">
+        <input id='chat-textfield' type="text" placeholder="Type Here">
     </div>            
 
-<script src="../static/js/main.js"></script> 
+<script src="../static/main.js"></script> 
 
 </body>
 </html>
