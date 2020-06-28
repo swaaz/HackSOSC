@@ -96,12 +96,14 @@ def bag_of_words(s, words):
     return numpy.array(bag)
 
 
+
 def chat(user_input):
     # while True:
     # inp = input("You: ")
     inp = user_input
-    # if inp.lower() == "quit":
-         # break
+    if inp.lower() == "quit":
+        exit()
+        
     results = model.predict([bag_of_words(inp, words)])
     results_index = numpy.argmax(results)
     tag = labels[results_index]
@@ -114,4 +116,4 @@ def chat(user_input):
         
 print("Hi I am chatbot, start here: ")
 
-chat()
+chat(user_input)
