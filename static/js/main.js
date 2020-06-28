@@ -1,17 +1,39 @@
 $('#bot').hide();
+$('#chat-button-close').hide();
 
-//onclick button
-$('#chat-button').click(function(){
+//onclick button functions : open and close chat window
+$('#chat-button-open').click(function(){
+    $('#chat-button-open').hide();
+    $('#chat-button-close').show();
+    $('#bot').show();
+    $('#chat-button-close').click(function(){
+        $('#bot').hide();
+        $('#chat-button-close').hide();
+        $('#chat-button-open').show();
+    })
 
-    var ifrm = document.createElement("iframe");
-ifrm.style="width: 280px; max-height: 100%; height: 338px; position: fixed; bottom: 0px; right: 3px; text-align: left; z-index: 2147483647; border: 0px none; border-radius: 4px 4px 0px 0px; box-shadow: 0px 0px 5px  rgb(51, 51, 51);";
-document.body.appendChild(ifrm);
+//appending input chats
+$('#send-button').click(function(){
+    var inputText= $('#chat-textfield').val();
+    if(inputText!=""){
+    $('.chat').append("<div class='chat-input'><p class='input'>"+inputText+"</p></div>");}
+    $('#chat-textfield').val("");
+    updateScroll();
+})
+
+//always show last chat bubble
+var element = document.getElementById("chat");
+element.scrollTop = element.scrollHeight;
+
+function updateScroll(){
+    var element = document.getElementById("chat");
+    element.scrollTop = element.scrollHeight;
+}
 
 
-//input text
-//function inputText(text){
-//    $('body').append("<div class='chat-container input'><p class='input'>"+text+"</p></div><br>");
-//};
+//bot response
+
+
 
 //output text
 //function outputText(text){
