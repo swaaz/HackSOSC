@@ -88,7 +88,7 @@ button:focus, #chat-textfield:focus {
 }
 
 #chat{
-    height: 470px;
+    height: 460px;
     width: 400px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -102,6 +102,14 @@ button:focus, #chat-textfield:focus {
 .input{
     text-align: right;
     background-color: #BEF2A5;
+    border-radius: 25px;
+    width: 60%;
+    padding: 0.5em 1em;
+    color: black;
+}
+.output{
+    text-align: left;
+    background-color: #347F5A;
     border-radius: 25px;
     width: 60%;
     padding: 0.5em 1em;
