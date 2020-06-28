@@ -12,20 +12,20 @@
 </head>
 <body>
     <h1>Test-Flask!!!</h1>
-<<<<<<< HEAD
-    <button id='chat-button'>
-        <i class="icofont-ui-messaging"></i>
-    </button>
-=======
     <button id='chat-button'><img id="message-icon" src='../assets/message-icon.png'></button>
->>>>>>> 93671f1ae28a3685c76687fb697fe1a8f4e52d9b
+
+    <button class="chat-button" id='chat-button-open'><img id="message-icon" src='../assets/message-icon.png'></button>
+    <button class="chat-button" id='chat-button-close'><img id="cross-icon" src="../assets/cross-icon.png" alt="close"></button>
     <div class="bot" id="bot">
-        <div class="bot-header" id="bot-header">
-            <img id='bot-header-image' src="../assets/hero_github.png" alt="ChatBot">
-            <p id="bot-header-text">Say Hi and ask all your queries</p>
+        
+        <div class="chat" id="chat">
+            <div class="bot-header" id="bot-header">
+                <img id='bot-header-image' src="../assets/hero_github.png" alt="ChatBot">
+                <p id="bot-header-text">Say Hi and ask all your queries</p>
+            </div>
         </div>
-        <div class="chat" id="chat"></div>
         <input id='chat-textfield' type="text" placeholder="Type Here">
+        <button id="send-button"><img src="../assets/send-icon.png" id="send-icon" alt="Send"></button>
     </div>            
 
 <script src="../static/main.js"></script> 
