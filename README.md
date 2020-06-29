@@ -1,6 +1,6 @@
 # HackSOSC
-
 Project for the Hackathon conducted by SOSC
+
 
 ## PROJECT TITLE
 
@@ -32,3 +32,4 @@ You can check out the [demo](https://xd.adobe.com/view/44474a82-4975-4af3-a5d2-b
 ### Our Current working Project
 
     tbd
+
