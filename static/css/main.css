@@ -1,9 +1,9 @@
-body{
+body {
     background-color: white;
     font-family: 'Nunito', sans-serif;
 }
 
-.chat-button{
+.chat-button {
     width: 60px;
     height: 60px;
     background: #00D974;
@@ -20,18 +20,19 @@ body{
     right: 20px;
     bottom: 20px;
 }
+
 button:focus, #chat-textfield:focus {
     border: none;
     outline: none;
 }
 
-#message-icon, #cross-icon{
+#message-icon, #cross-icon {
     padding: 13px;
     height: 20px;
     width: 20px;
 }
 
-.bot{
+.bot {
     height: 70%;
     width: 25%;
     background-color: rgb(255, 255, 255);
@@ -45,16 +46,16 @@ button:focus, #chat-textfield:focus {
     overflow: auto;
 }
 
-#bot-header-image{
+#bot-header-image {
     height: 250px;
     width: 400px;
 }
 
-#bot-header-text{
+#bot-header-text {
     text-align: center;
 }
 
-#chat-textfield{
+#chat-textfield {
     position: fixed;
     bottom: 170px;
     height: 35px;
@@ -64,7 +65,7 @@ button:focus, #chat-textfield:focus {
     border-radius: 25px;
 }
 
-#send-button{
+#send-button {
     width: 40px;
     height: 40px;
     background: #347F5A;
@@ -81,25 +82,33 @@ button:focus, #chat-textfield:focus {
     right: 50px;
 }
 
-#send-icon{
+#send-icon {
     height: 20px;
     width: 20px;
     padding: 5px;
 }
 
-#chat{
+#chat {
     height: 460px;
     width: 400px;
     overflow-x: hidden;
     overflow-y: auto;
 }
-#chat::-webkit-scrollbar { 
-    display: none; 
-} 
-.chat-input{
+
+#chat::-webkit-scrollbar {
+    display: none;
+}
+
+#chat {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.chat-input {
     float: left;
 }
-.input{
+
+.input {
     text-align: right;
     background-color: #BEF2A5;
     border-radius: 25px;
@@ -107,7 +116,8 @@ button:focus, #chat-textfield:focus {
     padding: 0.5em 1em;
     color: black;
 }
-.output{
+
+.output {
     text-align: left;
     background-color: #347F5A;
     border-radius: 25px;
