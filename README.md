@@ -4,13 +4,13 @@ Project for the Hackathon conducted by SOSC
 
 ## PROJECT TITLE
 
-### Project use case
+### Project Use Case
 
-We wanted to create something for SOSC website, so we developed a FAQ bot, which answers some common questions that some has about SOSC
+We wanted to create something for SOSC website, so we developed an FAQ bot, which answers some common questions that some people have about SOSC
 
 ### Tech Stacks Used
 
-- HTML/ CSS
+- HTML/ CSS/ JS
 - Python
 - Flask
 - Machine Learning - Tensorflow and NLTK
