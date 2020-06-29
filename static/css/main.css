@@ -109,13 +109,23 @@ button:focus, #chat-textfield:focus {
 }
 
 .input {
-    margin-left: 125px;
     text-align: right;
     background-color: #BEF2A5;
     border-radius: 25px;
     width: 60%;
     padding: 0.5em 1em;
     color: black;
+    margin-left: 80px;
+}
+
+.output {
+    text-align: left;
+    background-color: #347F5A;
+    border-radius: 25px;
+    width: 60%;
+    padding: 0.5em 1em;
+    color: black;
+}    color: black;
     margin-left: 80px;
 }
 
