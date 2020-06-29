@@ -32,4 +32,4 @@ You can check out the [demo](https://xd.adobe.com/view/44474a82-4975-4af3-a5d2-b
 ### Our Current working Project
 
 A short video of our progress in two days:
-![hackbot](https://user-images.githubusercontent.com/44167922/85984304-a2ac6a80-ba06-11ea-978e-b06641e09d88.gif)
+![Hackbot](https://user-images.githubusercontent.com/44167922/85984835-64fc1180-ba07-11ea-9e1b-f2afd53c6e5b.gif)
