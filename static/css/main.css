@@ -125,4 +125,15 @@ button:focus, #chat-textfield:focus {
     width: 60%;
     padding: 0.5em 1em;
     color: black;
+}    color: black;
+    margin-left: 80px;
+}
+
+.output {
+    text-align: left;
+    background-color: #347F5A;
+    border-radius: 25px;
+    width: 60%;
+    padding: 0.5em 1em;
+    color: black;
 }
