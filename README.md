@@ -31,5 +31,5 @@ You can check out the [demo](https://xd.adobe.com/view/44474a82-4975-4af3-a5d2-b
 
 ### Our Current working Project
 
-    tbd
-
+A short video of our progress in two days:<br>
+![Hackbot](https://user-images.githubusercontent.com/44167922/85984835-64fc1180-ba07-11ea-9e1b-f2afd53c6e5b.gif)
