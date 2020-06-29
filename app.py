@@ -1,9 +1,7 @@
 from flask import Flask , render_template, request
-import  main
+# import  main
 app = Flask(__name__)
-main.run()
-# temp = 'Hello'
-# output = main.chat(temp)
+# main.run()
 
 @app.route('/')
 def index():
@@ -14,7 +12,8 @@ def index():
 #function for the bot response
 def get_bot_response():
     userText = request.args.get('msg')
-    return str(main.chat(userText))
+    return ("Hello Swaaz!!!")
+    # return str(main.chat(userText))
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -34,11 +34,38 @@ $('#chat-button-open').click(function() {
 
     //bot response
 
+    function getResponse() {
+        let userText = $("#chat-textfield").val();
+        let userHtml = '<p class="input"><span>' + userText + '</span></p>';
+        $("#chat-textfield").val("");
+        $("#bot-header").append(userHtml);
+        document.getElementById('userInput').scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+        });
+        $.get("/get", {
+            msg: userText
+        }).done(function(data) {
+            var botHtml = '<p class="output"><span>' + data + '</span></p>';
+            $("#bot-header").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({
+                block: 'start',
+                behavior: 'smooth'
+            });
+        });
+    }
+    $("#chat-textfield").keypress(function(e) {
+        //if enter key is pressed
+        if (e.which == 13) {
+            getResponse();
+        }
+    });
+    $("#send-button").click(function() {
+        getResponse();
+    });
 
 
     // output text
-    var text = "SOSC"
-
 
     function outputText(text) {
         $('body').append("<div class='chat-output'><p class='output'>" + text + "</p></div><br>");
