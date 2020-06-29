@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOSC Chat Bot</title>
     <!-- CSS file link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <!-- <h1>Test-Flask!!!</h1> -->
 
 
     <!-- Floating icon -->
@@ -44,12 +43,10 @@
 
 
 
-
-
     <script>
         function getResponse() {
             let userText = $("#chat-textfield").val();
-            let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+            let userHtml = '<p class="input"><span>' + userText + '</span></p>';
             $("#chat-textfield").val("");
             $("#bot-header").append(userHtml);
             document.getElementById('userInput').scrollIntoView({
@@ -59,7 +56,7 @@
             $.get("/get", {
                 msg: userText
             }).done(function(data) {
-                var botHtml = '<p class="bot-header-text"><span>' + data + '</span></p>';
+                var botHtml = '<p class="output"><span>' + data + '</span></p>';
                 $("#bot-header").append(botHtml);
                 document.getElementById('userInput').scrollIntoView({
                     block: 'start',
@@ -77,10 +74,12 @@
             getResponse();
         });
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
     </div>
+
+
+
 
 
 </body>
