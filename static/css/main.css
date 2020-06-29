@@ -109,6 +109,7 @@ button:focus, #chat-textfield:focus {
 }
 
 .input {
+    margin-left: 125px;
     text-align: right;
     background-color: #BEF2A5;
     border-radius: 25px;
