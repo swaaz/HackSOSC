@@ -29,7 +29,7 @@ We wanted to make it non intrusive, and consistent with SOSC design, so these we
 ![Annotation 2020-06-29 093209](https://user-images.githubusercontent.com/44167922/85971684-73d4cb00-b9eb-11ea-9156-bf74f78ca929.png)
 You can check out the [demo](https://xd.adobe.com/view/44474a82-4975-4af3-a5d2-b5be10ec66c6-1114/screen/b7dd93b8-5c4c-4d7d-a829-97a89a4024fd/Web-1920-4) that [@ambx](https://github.com/suhanacharya) has designed in Adobe XD.
 
-### Our Current working Project
+### SOSC Chat Bot v1.0
 
-A short video of our progress in two days:
+A short video of our progress in two days:<br>
 ![Hackbot](https://user-images.githubusercontent.com/44167922/85984835-64fc1180-ba07-11ea-9e1b-f2afd53c6e5b.gif)
